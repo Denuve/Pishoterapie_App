@@ -5,9 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './Admin/nav-menu/nav-menu.component';
-import { HomeComponent } from './Admin/home/home.component';
-import { HomeUserComponent } from './User/home-user/home-user.component';
+import { NavMenuComponent } from './admin/nav-menu/nav-menu.component';
+import { HomeComponent } from './admin/home/home.component';
+import { HomeUserComponent } from './user/home-user/home-user.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/angular-material.module';
