@@ -7,13 +7,125 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Hello, world!</h1>
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <div class="navigation-menu">
+
+        <button mat-button [matMenuTriggerFor]="menu" id="navigation-menu-home">
+          Meniu
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><a href="#">Servicii</a></button>
+          <button mat-menu-item><a href="#">Articole</a></button>
+          <button mat-menu-item><a href="#">Despre mine</a></button>
+          <button mat-menu-item><a href="#">Programare</a></button>
+          <button mat-menu-item><a href="#">Contact</a></button>
+        </mat-menu>
+
+    </div>
+
+    <div class="up-content">
+    
+
+      <h1 id="up-content-h1">Psihoterapie</h1>
+    </div>  
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-9">
+          <div class="home_content">
+            <img src="https://static.wixstatic.com/media/8b189f_e044fd1f1b244762b73cc114a3cb9b90~mv2.jpg" id="mind-image" width="480" height="300" align="left" />
+            <h3 id="description_text">
+              Psihoterapia consta intr-o serie de tehnici care au ca scop  tratarea sanatatii mentale,
+              emotionale, precum si unele afectiuni psihiatrice.
+              Psihoterapia ajuta pacientul sa inteleaga care sunt factorii ce
+              le determina starile si ii ajuta sa accepte punctele slabe,
+              dar si cele forte. Daca oamenii isi pot identifica sentimentele
+              si modalitatea in care percep viata, le este mai usor sa faca
+              fata situatiilor dificile.Psihoterapia este frecvent utilizata pentru
+              problemele care se acumuleaza de-a lungul timpului.
+              Aceasta functioneaza numai in cazul in care se construieste o relatie de incredere
+              intre pacient si psihoterapeut.
+            </h3>
+          </div>
+
+
+          <h4 id="main-text-content">
+            Unii oameni se refera la psihoterapie ca fiind "tratamentul prin vorbire" deoarece se bazeaza pe comunicarea dintre psihotrerapeut si un grup de persoane cu probleme similare. Unele forme de psihoterapie folosesc si alte tipuri de comunicare, inclusiv pin scris, opere de arta, povesti narative sau muzica. Sesiunile au loc in cadrul unei intalniri structurate dintre terapeut si pacient (sau pacienti).
+
+            Psihoterapia teoretica a devenit cunoscuta in secolul 19, prin psihanaliza, dar s-a dezvoltat semnificativ de atunci.
+
+            Un psihoterapeut poate fi un psiholog, terapeut pe probleme  de casatorie, familie sau ocupational, asistent social licentiat, consilier, asistenta psihiatrica, psihanalist sau psihiatru.
+
+            Una dintre problemele principale ale psihoterapiei, potrivit expertilor, este faptul ca pacientul renunta la sedinte. Un studiu, efectuat de cercetatorii de la Northwestern University's Feinberg School of Medicine, au descoperit ca atunci cand pacientii fac psihoterapie pentru depresie la telefon, majoritatea continua sedintele.
+            <br /><br />
+            Comunicare sau medicamente?
+            <br /><br />
+
+            Psihologii percep suferinta individuala ca pe un rezultat al problemelor ce apar la nivelul relatiilor interuman, si nu ca un rezultat al unei tulburari persoanle. Un psiholog care se specializeaza in psihoterapie va lua in considerare contextul larg al relatiilor din cadrul familiei sau de la locul de munca. Psihiatrii tind sa aiba o abordare medicala asupra sanatatii mentale si sunt inclinati sa prescrie medicamente pentru a atenua stresul.
+
+            Majoritatea psihologilor afirma ca abordarile medicale vizeaza suferinta ca pe un simptom al unei afectiuni, asa cum vad si simptomele problemelor fizice. Prin urmare, un psihiatru sau un neurolog vor stabili un diagnostic (ex: tulburare ob sesiv compulsiva, depresie, tulburare post-traumatica) si vor prescrie medicamente, ca apoi sa recomande si o eventuala interventie psihologica.
+
+            Numeroase studii au demonstrat ca cele mai eficiente tratamente pentru boli mentale, in mod special depresia, implica o combinatie de medicamente si psihoterapie.
+            Asociatia Americana de Psihiatrie a explicat ca "multe probleme de sanatate pot fi rezolvate doar prin psihoterapie, aceasta fiind o componenta cruciala in succesul tratamentului cu medicamente".
+          </h4>
+        </div>
+
+
+        <div class="col-3" id="right-sidebar">
+          <div class="card" style="width: 18rem;" >
+            <div class="card-body">
+              <h5 class="card-title" id="card-title-text">Articole</h5>
+              <p class="card-text" id="card-text-content">Articol1</p>
+              <p class="card-text" id="card-text-content">Articol2</p>
+              <p class="card-text" id="card-text-content">Articol3</p>
+              <p class="card-text" id="card-text-content">Articol4</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+ 
+    <div class="footer">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-9">
+            <i class="fab fa-facebook-square" id="icon"></i>
+            <i class="fab fa-whatsapp" id="icon"></i>
+            <i class="far fa-envelope" id="icon"></i>
+          </div>
+
+          <div class="col-2">
+            <h4>Lorem ipsum</h4>
+            <h4>Lorem ipsum</h4>
+            <h4>Lorem ipsum</h4>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+
 </body>
 </html>

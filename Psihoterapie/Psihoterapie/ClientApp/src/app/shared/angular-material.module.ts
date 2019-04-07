@@ -13,6 +13,7 @@ import {
   MatProgressSpinnerModule,
   MatCheckboxModule,
   MatSliderModule,
+  MatMenuModule,
   MatProgressBarModule
 } from '@angular/material';
 
@@ -30,6 +31,7 @@ import {
     MatCheckboxModule,
     MatProgressSpinnerModule,
     MatSliderModule,
+    MatMenuModule,
     MatProgressBarModule
   ],
   exports: [
@@ -45,6 +47,7 @@ import {
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatSliderModule,
+    MatMenuModule,
     MatProgressBarModule
   ],
   providers: [

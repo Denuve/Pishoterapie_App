@@ -1,0 +1,63 @@
+.navigation-menu {
+  height: 5vh;
+  background-color: #711ff4;
+  border-bottom: 2px solid #595a5b;
+  margin-bottom: 4px;
+  display:flex;
+}
+
+
+#navigation-menu-home {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.up-content{
+  height: 20vh;
+}
+
+#up-content-h1 {
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #e23614;
+}
+
+
+#description_text {
+  font-size: 20px;
+  text-align:justify;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#main-text-content {
+  font-size: 17px;
+  text-align:justify;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#mind-image {
+  margin-right: 15px;
+}
+
+#card-title-text {
+  font-size: 28px;
+  font-family: 'Noto Serif', serif;
+}
+.card-text-content {
+  font-size: 26px;
+  font-family: 'Noto Serif', serif;
+}
+
+.footer {
+  margin-top: 20px;
+  height: 8vh;
+  background-color: #711ff4;
+}
+
+#icon{
+  font-size:40px;
+  margin-left: 7px;
+  margin-top: 7px;
+}
