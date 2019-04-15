@@ -14,7 +14,11 @@ import { AngularMaterialModule } from './shared/angular-material.module';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ServiciiComponent } from './servicii/servicii.component';
+import { ServiciiComponent } from './user/servicii/servicii.component';
+import { ArticoleComponent } from './user/articole/articole.component';
+import { DespremineComponent } from './user/despremine/despremine.component';
+import { ProgramareComponent } from './user/programare/programare.component';
+import { ContactComponent } from './user/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { ServiciiComponent } from './servicii/servicii.component';
     NavComponent,
     FooterComponent,
     SidebarComponent,
-    ServiciiComponent
+    ServiciiComponent,
+    ArticoleComponent,
+    DespremineComponent,
+    ProgramareComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,6 +43,11 @@ import { ServiciiComponent } from './servicii/servicii.component';
     AngularMaterialModule,
     RouterModule.forRoot([
       { path: '', component: HomeUserComponent, pathMatch: 'full' },
+      { path: 'servicii', component: ServiciiComponent, pathMatch: 'full' },
+      { path: 'articole', component: ArticoleComponent, pathMatch: 'full' },
+      { path: 'despremine', component: DespremineComponent, pathMatch: 'full' },
+      { path: 'programare', component: ProgramareComponent, pathMatch: 'full' },
+      { path: 'contact', component: ContactComponent, pathMatch: 'full' },
     ])
   ],
   exports: [
