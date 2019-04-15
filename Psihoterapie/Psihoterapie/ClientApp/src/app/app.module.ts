@@ -11,13 +11,21 @@ import { HomeUserComponent } from './user/home-user/home-user.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/angular-material.module';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ServiciiComponent } from './servicii/servicii.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    HomeUserComponent
+    HomeUserComponent,
+    NavComponent,
+    FooterComponent,
+    SidebarComponent,
+    ServiciiComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

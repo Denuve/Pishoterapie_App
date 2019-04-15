@@ -1,0 +1,25 @@
+.navigation-menu {
+  height: 5vh;
+  background-color: #711ff4;
+  border-bottom: 2px solid #595a5b;
+  margin-bottom: 4px;
+  display: flex;
+}
+
+
+#navigation-menu-home {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.up-content {
+  height: 20vh;
+}
+
+#up-content-h1 {
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #e23614;
+}
