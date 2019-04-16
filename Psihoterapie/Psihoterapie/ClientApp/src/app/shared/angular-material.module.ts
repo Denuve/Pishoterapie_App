@@ -14,6 +14,8 @@ import {
   MatCheckboxModule,
   MatSliderModule,
   MatMenuModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
   MatProgressBarModule
 } from '@angular/material';
 
@@ -32,6 +34,8 @@ import {
     MatProgressSpinnerModule,
     MatSliderModule,
     MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatProgressBarModule
   ],
   exports: [
@@ -48,6 +52,8 @@ import {
     MatCheckboxModule,
     MatSliderModule,
     MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatProgressBarModule
   ],
   providers: [
