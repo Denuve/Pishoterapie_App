@@ -19,6 +19,8 @@ import { ArticoleComponent } from './user/articole/articole.component';
 import { DespremineComponent } from './user/despremine/despremine.component';
 import { ProgramareComponent } from './user/programare/programare.component';
 import { ContactComponent } from './user/contact/contact.component';
+import { ArticolComponent } from './user/articol/articol.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ContactComponent } from './user/contact/contact.component';
     ArticoleComponent,
     DespremineComponent,
     ProgramareComponent,
-    ContactComponent
+    ContactComponent,
+    ArticolComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -48,6 +52,8 @@ import { ContactComponent } from './user/contact/contact.component';
       { path: 'despremine', component: DespremineComponent, pathMatch: 'full' },
       { path: 'programare', component: ProgramareComponent, pathMatch: 'full' },
       { path: 'contact', component: ContactComponent, pathMatch: 'full' },
+      { path: 'articol', component: ArticolComponent, pathMatch: 'full' },
+      { path: 'login', component: LoginComponent, pathMatch: 'full' },
     ])
   ],
   exports: [
