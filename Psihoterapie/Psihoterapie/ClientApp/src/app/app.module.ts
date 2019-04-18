@@ -21,6 +21,7 @@ import { ProgramareComponent } from './user/programare/programare.component';
 import { ContactComponent } from './user/contact/contact.component';
 import { ArticolComponent } from './user/articol/articol.component';
 import { LoginComponent } from './login/login.component';
+import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LoginComponent } from './login/login.component';
     ProgramareComponent,
     ContactComponent,
     ArticolComponent,
-    LoginComponent
+    LoginComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -54,6 +56,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'contact', component: ContactComponent, pathMatch: 'full' },
       { path: 'articol', component: ArticolComponent, pathMatch: 'full' },
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
+      { path: 'admin-home', component: AdminHomeComponent, pathMatch: 'full' },
     ])
   ],
   exports: [

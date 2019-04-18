@@ -16,6 +16,7 @@ import {
   MatMenuModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatTableModule,
   MatProgressBarModule
 } from '@angular/material';
 
@@ -36,6 +37,7 @@ import {
     MatMenuModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatTableModule,
     MatProgressBarModule
   ],
   exports: [
@@ -54,6 +56,7 @@ import {
     MatMenuModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatTableModule,
     MatProgressBarModule
   ],
   providers: [

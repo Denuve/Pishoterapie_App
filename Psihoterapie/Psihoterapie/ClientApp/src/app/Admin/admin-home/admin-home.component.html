@@ -1,0 +1,60 @@
+<nav>
+<button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Home</button>
+  <button mat-menu-item>Mesaje</button>
+  <button mat-menu-item>Programari</button>
+  <button mat-menu-item>Lista Pacienti</button>
+</mat-menu>
+</nav>
+
+<div>
+  <h3 class="title-h3">Programari curente (10/08/1997)</h3>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="table-sizing">#</th>
+      <th scope="col" class="table-sizing">FirstName</th>
+      <th scope="col" class="table-sizing">LastName</th>
+      <th scope="col" class="table-sizing">Time</th>
+      <th scope="col" class="table-sizing">Phone</th>
+      <th scope="col" class="table-sizing">Personal Record Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="table-sizing">1</th>
+      <td class="table-sizing">Ion</td>
+      <td class="table-sizing">Vasile</td>
+      <td class="table-sizing">12:00</td>
+      <td class="table-sizing">0711223344</td>
+      <td class="table-sizing">Link</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table-sizing">2</th>
+      <td class="table-sizing">Thor</td>
+      <td class="table-sizing">Odin</td>
+      <td class="table-sizing">14:00</td>
+      <td class="table-sizing">0711223344</td>
+      <td class="table-sizing">Link</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table-sizing">3</th>
+      <td class="table-sizing">Marian</td>
+      <td class="table-sizing">Ionut</td>
+      <td class="table-sizing">16:00</td>
+      <td class="table-sizing">0711223344</td>
+      <td class="table-sizing">Link</td>
+    </tr>
+    <tr>
+      <th scope="row" class="table-sizing">4</th>
+      <td class="table-sizing">Doctor</td>
+      <td class="table-sizing">Strange</td>
+      <td class="table-sizing">18:00</td>
+      <td class="table-sizing">0711223344</td>
+      <td class="table-sizing">Link</td>
+    </tr>
+  </tbody>
+</table>
