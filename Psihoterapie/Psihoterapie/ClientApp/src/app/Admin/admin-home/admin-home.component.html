@@ -1,10 +1,10 @@
-<nav>
+<nav style="margin-bottom:20px">
 <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
 <mat-menu #beforeMenu="matMenu" xPosition="before">
-  <button mat-menu-item>Home</button>
-  <button mat-menu-item>Mesaje</button>
-  <button mat-menu-item>Programari</button>
-  <button mat-menu-item>Lista Pacienti</button>
+  <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
+  <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
+  <button mat-menu-item><a href="#">Programari</a></button>
+  <button mat-menu-item><a href="">Lista Pacienti</a></button>
 </mat-menu>
 </nav>
 

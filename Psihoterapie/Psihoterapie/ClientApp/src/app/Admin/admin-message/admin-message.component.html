@@ -1,0 +1,63 @@
+<nav style="margin-bottom:20px">
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
+    <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
+    <button mat-menu-item><a href="#">Programari</a></button>
+    <button mat-menu-item><a href="">Lista Pacienti</a></button>
+  </mat-menu>
+</nav>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="inbox">
+
+    <div class="container">
+      <div class="content-container clearfix">
+        <div class="col-md-12">
+          <h1 class="content-title">Inbox</h1>
+
+          <input type="search" placeholder="Search Message" class="form-control mail-search" />
+
+          <ul class="mail-list">
+            <li>
+              <a href="">
+                <span class="mail-sender">Name</span>
+                <span class="mail-subject">Email</span>
+                <span class="mail-message-preview">Message template...</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="mail-sender">Name</span>
+                <span class="mail-subject">Email</span>
+                <span class="mail-message-preview">Message template...</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="mail-sender">Name</span>
+                <span class="mail-subject">Email</span>
+                <span class="mail-message-preview">Message template...</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="mail-sender">Name</span>
+                <span class="mail-subject">Email</span>
+                <span class="mail-message-preview">Message template...</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="mail-sender">Name</span>
+                <span class="mail-subject">Email</span>
+                <span class="mail-message-preview">Message template...</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>

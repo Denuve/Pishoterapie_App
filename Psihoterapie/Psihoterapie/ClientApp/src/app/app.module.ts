@@ -22,6 +22,7 @@ import { ContactComponent } from './user/contact/contact.component';
 import { ArticolComponent } from './user/articol/articol.component';
 import { LoginComponent } from './login/login.component';
 import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
+import { AdminMessageComponent } from './Admin/admin-message/admin-message.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
     ContactComponent,
     ArticolComponent,
     LoginComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    AdminMessageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -57,6 +59,7 @@ import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
       { path: 'articol', component: ArticolComponent, pathMatch: 'full' },
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
       { path: 'admin-home', component: AdminHomeComponent, pathMatch: 'full' },
+      { path: 'admin-message', component: AdminMessageComponent, pathMatch: 'full' },
     ])
   ],
   exports: [
