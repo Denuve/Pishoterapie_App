@@ -23,6 +23,8 @@ import { ArticolComponent } from './user/articol/articol.component';
 import { LoginComponent } from './login/login.component';
 import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 import { AdminMessageComponent } from './Admin/admin-message/admin-message.component';
+import { AdminAppointmentComponent } from './Admin/admin-appointment/admin-appointment.component';
+import { AdminArchiveComponent } from './Admin/admin-archive/admin-archive.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { AdminMessageComponent } from './Admin/admin-message/admin-message.compo
     ArticolComponent,
     LoginComponent,
     AdminHomeComponent,
-    AdminMessageComponent
+    AdminMessageComponent,
+    AdminAppointmentComponent,
+    AdminArchiveComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -60,6 +64,8 @@ import { AdminMessageComponent } from './Admin/admin-message/admin-message.compo
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
       { path: 'admin-home', component: AdminHomeComponent, pathMatch: 'full' },
       { path: 'admin-message', component: AdminMessageComponent, pathMatch: 'full' },
+      { path: 'admin-appointment', component: AdminAppointmentComponent, pathMatch: 'full' },
+      { path: 'admin-archive', component: AdminArchiveComponent, pathMatch: 'full' },
     ])
   ],
   exports: [
