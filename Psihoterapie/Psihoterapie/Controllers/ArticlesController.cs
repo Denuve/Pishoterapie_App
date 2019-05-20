@@ -10,8 +10,7 @@ using Psihoterapie.Models;
 namespace Psihoterapie.Controllers
 {
     [Route("api/[controller]/[action]")]
-    [ApiController]
-    public class ArticlesController : ControllerBase
+    public class ArticlesController : Controller
     {
         private readonly PsihoterapieContext _context;
 
@@ -22,7 +21,7 @@ namespace Psihoterapie.Controllers
 
         // GET: api/Articles
         [HttpGet]
-        public IEnumerable<Article> GetArticle()
+        public IEnumerable<Article> GetArticles()
         {
             return _context.Articles.ToArray();
         }

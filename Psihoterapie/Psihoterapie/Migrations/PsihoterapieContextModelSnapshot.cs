@@ -36,7 +36,7 @@ namespace Psihoterapie.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Article");
+                    b.ToTable("Articles");
                 });
 #pragma warning restore 612, 618
         }

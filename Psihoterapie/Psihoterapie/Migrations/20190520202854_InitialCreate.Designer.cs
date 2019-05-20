@@ -10,8 +10,8 @@ using Psihoterapie.Models;
 namespace Psihoterapie.Migrations
 {
     [DbContext(typeof(PsihoterapieContext))]
-    [Migration("20190512120320_Added Articles")]
-    partial class AddedArticles
+    [Migration("20190520202854_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,7 +38,7 @@ namespace Psihoterapie.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Article");
+                    b.ToTable("Articles");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,7 +11,7 @@ export class ArticleService {
 
   }
   listArticles() {
-    return this.http.get<Article[]>(this.baseUrl + 'api/Articles/GetArticle');
+    return this.http.get<Article[]>(this.baseUrl + 'api/Articles/GetArticles');
   }
 
   loadArticle(articleID: string) {
