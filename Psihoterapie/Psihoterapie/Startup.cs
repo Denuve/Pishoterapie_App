@@ -1,10 +1,12 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Psihoterapie.Models;
 
 namespace Psihoterapie
 {
@@ -27,6 +29,9 @@ namespace Psihoterapie
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddDbContext<PsihoterapieContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PsihoterapieContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
