@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Psihoterapie.Models;
 
 namespace Psihoterapie.Migrations
 {
     [DbContext(typeof(PsihoterapieContext))]
-    partial class PsihoterapieContextModelSnapshot : ModelSnapshot
+    [Migration("20190521083031_AddedDescriptionArticle")]
+    partial class AddedDescriptionArticle
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,46 +41,6 @@ namespace Psihoterapie.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Articles");
-                });
-
-            modelBuilder.Entity("Psihoterapie.Models.Patient", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Age");
-
-                    b.Property<DateTime>("Appointment");
-
-                    b.Property<string>("City");
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("FamilyRelationship");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<string>("MajorTrauma");
-
-                    b.Property<string>("MedicalDisease");
-
-                    b.Property<string>("Medication");
-
-                    b.Property<string>("OtherInformations");
-
-                    b.Property<string>("Phone");
-
-                    b.Property<string>("Street");
-
-                    b.Property<string>("StreetNumber");
-
-                    b.Property<string>("TheraphyReason");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Patient");
                 });
 #pragma warning restore 612, 618
         }

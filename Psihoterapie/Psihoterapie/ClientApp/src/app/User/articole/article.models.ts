@@ -5,6 +5,7 @@ export interface Article {
   category: string;
   date: string;
   imagepath: string;
+  description: string;
   content: string;
 
 }

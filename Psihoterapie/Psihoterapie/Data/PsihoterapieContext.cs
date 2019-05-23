@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Psihoterapie.Models;
 
 namespace Psihoterapie.Models
 {
@@ -14,5 +15,7 @@ namespace Psihoterapie.Models
         }
 
         public DbSet<Psihoterapie.Models.Article> Articles { get; set; }
+
+        public DbSet<Psihoterapie.Models.Patient> Patient { get; set; }
     }
 }
