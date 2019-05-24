@@ -9,7 +9,7 @@ using Psihoterapie.Models;
 
 namespace Psihoterapie.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class PatientsController : Controller
     {
         private readonly PsihoterapieContext _context;
@@ -21,7 +21,7 @@ namespace Psihoterapie.Controllers
 
         // GET: api/Patients
         [HttpGet]
-        public IEnumerable<Patient> GetPatient()
+        public IEnumerable<Patient> GetPatients()
         {
             return _context.Patient;
         }
