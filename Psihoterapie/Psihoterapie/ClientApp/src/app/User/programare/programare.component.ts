@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProgramareService } from './programare.service';
 import { Programare } from './programare';
 import { Guid } from 'guid-typescript';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-programare',
@@ -11,12 +12,19 @@ import { Guid } from 'guid-typescript';
 export class ProgramareComponent implements OnInit {
 
   patient = new Programare();
-  constructor(programareService: ProgramareService) {
+  constructor(
+    private router: Router,
+    private programareService: ProgramareService) {
+    
   }
 
-  addPatient() {
-    this.patient.id = Guid.create(); 
+  
+  submit() {
+    this.programareService.postPatient(this.patient);
   }
+
+
+  
 
   ngOnInit() {
   }

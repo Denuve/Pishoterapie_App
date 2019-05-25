@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Psihoterapie.Models;
 
 namespace Psihoterapie.Migrations
 {
     [DbContext(typeof(PsihoterapieContext))]
-    partial class PsihoterapieContextModelSnapshot : ModelSnapshot
+    [Migration("20190525161155_Modified Patient Controller")]
+    partial class ModifiedPatientController
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

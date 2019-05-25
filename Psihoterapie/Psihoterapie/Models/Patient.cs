@@ -17,11 +17,7 @@ namespace Psihoterapie.Models
 
         public string Phone { get; set; }
 
-        public string City { get; set; }
-
-        public string Street { get; set; }
-
-        public string StreetNumber { get; set; }
+        public string Address { get; set; }
 
         public int Age { get; set; }
 

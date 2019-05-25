@@ -23,10 +23,10 @@ export class ProgramareService {
   }
 
   postPatient(patient: Programare) {
-    return this.http.post<any>(this.baseUrl + `api/Articles/PostPatient`, patient);
+    return this.http.post<any>(this.baseUrl + `api/Patients/PostPatient`, patient);
   }
 
   deletePatient(patientID: string) {
-    return this.http.delete<any>(this.baseUrl + `api/Articles/DeletePatient?patientID=${patientID}`);
+    return this.http.delete<any>(this.baseUrl + `api/Patients/DeletePatient?patientID=${patientID}`);
   }
 }

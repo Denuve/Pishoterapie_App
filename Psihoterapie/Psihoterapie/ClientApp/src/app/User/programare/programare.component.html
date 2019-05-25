@@ -1,46 +1,75 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-9">
-      <form class="form-class" >
+
+      <form class="form-class">
 
         <h4 class="h4-text">1.DATE DE CONTACT</h4>
 
 
         <div class="form-group">
           <label for="FirstName">Nume</label>
-          <input type="text" class="form-control" placeholder="Introduceti numele" [(ngModel)]="patient.firstname" name="firstName" required>
+          <input type="text" class="form-control" placeholder="Introduceti numele" [(ngModel)]="patient.firstname" name="firstName" #firstName="ngModel" required>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+          Numele este obligatoriu
         </div>
 
         <div class="form-group">
           <label for="LastName">Prenume</label>
-          <input type="text" class="form-control" placeholder="Introduceti prenumele" [(ngModel)]="patient.lastname" name="lastName" required>
+          <input type="text" class="form-control" placeholder="Introduceti prenumele" [(ngModel)]="patient.lastname" name="lastName" #lastName="ngModel" required>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+          Prenumele este obligatoriu
         </div>
 
         <div class="form-group">
           <label for="Email">Email</label>
-          <input type="email" class="form-control" placeholder="Introduceti mail-ul" [(ngModel)]="patient.email" name="email" required>
+          <input type="email" class="form-control" placeholder="Introduceti mail-ul" [(ngModel)]="patient.email" name="email" #mail="ngModel" required>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="mail.touched && !mail.valid">
+          Emailul este obligatoriu
         </div>
 
         <div class="form-group">
           <label for="Phone">Telefon</label>
-          <input type="text" class="form-control" placeholder="+407XXXXXXXX" [(ngModel)]="patient.phone" name="phone" required>
+          <input type="text" class="form-control" placeholder="+407XXXXXXXX" [(ngModel)]="patient.phone" name="phone" #phone="ngModel" required>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="phone.touched && !phone.valid">
+          Numarul de telefon este obligatoriu
         </div>
 
         <div class="form-group">
           <label for="Adress">Adresa completa</label>
-          <input type="text" class="form-control" placeholder="Oras,Strada,Numar,etc" [(ngModel)]="patient.address" name="address" required>
+          <input type="text" class="form-control" placeholder="Judet,Oras,Strada,Numar,etc" [(ngModel)]="patient.address" name="address" #address="ngModel" required>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="address.touched && !address.valid">
+          Adresa este obligatorie
         </div>
 
         <div class="form-group">
           <label for="birthdate">Varsta</label>
-          <input type="text" class="form-control" placeholder="0-200 ani" [(ngModel)]="patient.age" name="age" required>
+          <input type="text" class="form-control" placeholder="0-200 ani" [(ngModel)]="patient.age" name="age" #age="ngModel" required>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="age.touched && !age.valid">
+          Varsta este obligatorie
         </div>
 
         <h4 class="h4-text">2.DATE DESPRE PROFILUL PSIHOLOGIC</h4>
 
         <div class="form-group">
           <label for="reason">Motivul terapiei</label>
-          <textarea class="form-control" rows="6" [(ngModel)]="patient.theraphyreason" name="reason"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.theraphyreason" name="reason" #reason="ngModel" required></textarea>
+        </div>
+
+        <div class="alert alert-danger" *ngIf="reason.touched && !reason.valid">
+          Va rugam sa specificati motivul pentru care solicitati terapie!
         </div>
 
         <div class="form-group">
@@ -72,14 +101,15 @@
         <div class="form-group">
           <label for="theraphy-date" class="date-picker-birth">Alegeti data programarii  </label>
           <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="patient.appointment" name="date">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="patient.appointment" name="date" required>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker> 
+            <mat-datepicker #picker></mat-datepicker>
             <br />
           </mat-form-field>
         </div>
+       
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
       </form>
     </div>
   </div>
