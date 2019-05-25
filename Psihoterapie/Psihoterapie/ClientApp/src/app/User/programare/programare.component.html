@@ -4,75 +4,77 @@
       <form class="form-class" >
 
         <h4 class="h4-text">1.DATE DE CONTACT</h4>
+
+
         <div class="form-group">
           <label for="FirstName">Nume</label>
-          <input type="text" class="form-control" id="FirstName" aria-describedby="emailHelp" placeholder="Introduceti numele" [(ngModel)]="patients.firsname" required>
+          <input type="text" class="form-control" placeholder="Introduceti numele" [(ngModel)]="patient.firstname" name="firstName" required>
         </div>
 
         <div class="form-group">
           <label for="LastName">Prenume</label>
-          <input type="text" class="form-control" id="LastName" aria-describedby="emailHelp" placeholder="Introduceti prenumele" [(ngModel)]="patients.lastname" required>
+          <input type="text" class="form-control" placeholder="Introduceti prenumele" [(ngModel)]="patient.lastname" name="lastName" required>
         </div>
 
         <div class="form-group">
           <label for="Email">Email</label>
-          <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Introduceti mail-ul" [(ngModel)]="patients.email" required>
+          <input type="email" class="form-control" placeholder="Introduceti mail-ul" [(ngModel)]="patient.email" name="email" required>
         </div>
 
         <div class="form-group">
           <label for="Phone">Telefon</label>
-          <input type="text" class="form-control" id="Phone" aria-describedby="emailHelp" placeholder="+407XXXXXXXX" [(ngModel)]="patients.phone" required>
+          <input type="text" class="form-control" placeholder="+407XXXXXXXX" [(ngModel)]="patient.phone" name="phone" required>
         </div>
 
         <div class="form-group">
           <label for="Adress">Adresa completa</label>
-          <input type="text" class="form-control" id="Adress" placeholder="Oras,Strada,Numar,etc" [(ngModel)]=""patients.street" required>
+          <input type="text" class="form-control" placeholder="Oras,Strada,Numar,etc" [(ngModel)]="patient.address" name="address" required>
         </div>
 
         <div class="form-group">
           <label for="birthdate">Varsta</label>
-          <input type="text" class="form-control" id="Adress" placeholder="0-200 ani" [(ngModel)]="patients.age" required>
+          <input type="text" class="form-control" placeholder="0-200 ani" [(ngModel)]="patient.age" name="age" required>
         </div>
 
         <h4 class="h4-text">2.DATE DESPRE PROFILUL PSIHOLOGIC</h4>
 
         <div class="form-group">
           <label for="reason">Motivul terapiei</label>
-          <textarea class="form-control" id="reason" rows="6" [(ngModel)]="patients.theraphyreason"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.theraphyreason" name="reason"></textarea>
         </div>
 
         <div class="form-group">
           <label for="trauma">Descrierea traumelor majore din viata(se scrie oricat de mult)</label>
-          <textarea class="form-control" id="reason" rows="6" [(ngModel)]="patients.majortrauma"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.majortrauma" name="majortrauma"></textarea>
         </div>
 
         <div class="form-group">
           <label for="relationsihip">Relatia cu familia,prietenii,relatiile de cuplu trecute sau prezente</label>
-          <textarea class="form-control" id="reason" rows="6" [(ngModel)]="patients.familyrelationship"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.familyrelationship" name="familyrelationship"></textarea>
         </div>
 
         <div class="form-group">
           <label for="medicalrecords">Afectiuni medicale</label>
-          <textarea class="form-control" id="reason" rows="6" [(ngModel)]="patients.medicaldisease"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.medicaldisease" name="medicaldisease"></textarea>
         </div>
 
         <div class="form-group">
           <label for="medication">Urmati o medicatie prescrisa de medicul specialist? Daca da, se precizeaza ce medicamente luati!</label>
-          <textarea class="form-control" id="reason" rows="6" [(ngModel)]="patients.medication"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.medication" name="medication"></textarea>
         </div>
 
         <div class="form-group">
           <label for="details">Alte precizari</label>
-          <textarea class="form-control" id="reason" rows="6" [(ngModel)]="patients.otherinformation"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.otherinformation" name="otherinfo"></textarea>
         </div>
 
         <h4 class="h4-text">3 .DATA PROGRAMARE SEDINTA</h4>
         <div class="form-group">
           <label for="theraphy-date" class="date-picker-birth">Alegeti data programarii  </label>
           <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="patients.appointment">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="patient.appointment" name="date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker #picker></mat-datepicker> 
             <br />
           </mat-form-field>
         </div>

@@ -1,12 +1,12 @@
-export interface Programare {
-  id: string;
+import { Guid } from "guid-typescript";
+
+export class Programare {
+  id: Guid;
   firstname: string;
   lastname: string;
   email: string;
   phone: string;
-  city: string;
-  street: string;
-  streetnumber: number;
+  address: string;
   age: number;
   theraphyreason: string;
   majortrauma: string;
@@ -14,5 +14,5 @@ export interface Programare {
   medicaldisease: string;
   medication: string;
   otherinformation: string;
-  appointment: string;
+  appointment: any;
 }

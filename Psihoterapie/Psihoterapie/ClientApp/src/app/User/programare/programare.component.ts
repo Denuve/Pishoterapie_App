@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgramareService } from './programare.service';
 import { Programare } from './programare';
-import { MatDatepickerInputEvent } from '@angular/material';
+import { Guid } from 'guid-typescript';
 
 @Component({
   selector: 'app-programare',
@@ -10,13 +10,12 @@ import { MatDatepickerInputEvent } from '@angular/material';
 })
 export class ProgramareComponent implements OnInit {
 
-  patient: Programare;
+  patient = new Programare();
   constructor(programareService: ProgramareService) {
-    
   }
 
   addPatient() {
-    
+    this.patient.id = Guid.create(); 
   }
 
   ngOnInit() {
