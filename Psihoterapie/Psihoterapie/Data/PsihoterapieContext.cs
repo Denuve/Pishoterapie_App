@@ -17,5 +17,7 @@ namespace Psihoterapie.Models
         public DbSet<Psihoterapie.Models.Article> Articles { get; set; }
 
         public DbSet<Psihoterapie.Models.Patient> Patient { get; set; }
+
+        public DbSet<Psihoterapie.Models.Message> Message { get; set; }
     }
 }

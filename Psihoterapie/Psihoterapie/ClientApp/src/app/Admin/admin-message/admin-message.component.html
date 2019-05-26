@@ -19,41 +19,15 @@
           <input type="search" placeholder="Search Message" class="form-control mail-search" />
 
           <ul class="mail-list">
-            <li>
+            <li *ngFor="let message of messages">
               <a href="">
-                <span class="mail-sender">Name</span>
-                <span class="mail-subject">Email</span>
-                <span class="mail-message-preview">Message template...</span>
+                <span class="mail-sender">{{message.name}}</span>
+                <span class="mail-subject">{{message.email}}</span>
+                <span class="mail-message-preview">{{message.messagecontent}}</span>
               </a>
             </li>
             <li>
-              <a href="">
-                <span class="mail-sender">Name</span>
-                <span class="mail-subject">Email</span>
-                <span class="mail-message-preview">Message template...</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="mail-sender">Name</span>
-                <span class="mail-subject">Email</span>
-                <span class="mail-message-preview">Message template...</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="mail-sender">Name</span>
-                <span class="mail-subject">Email</span>
-                <span class="mail-message-preview">Message template...</span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="mail-sender">Name</span>
-                <span class="mail-subject">Email</span>
-                <span class="mail-message-preview">Message template...</span>
-              </a>
-            </li>
+              
           </ul>
         </div>
       </div>

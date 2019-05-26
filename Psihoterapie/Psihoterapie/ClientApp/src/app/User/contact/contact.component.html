@@ -46,21 +46,24 @@
   <div class="contact-image">
     <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
   </div>
-  <form method="post">
+  <form >
     <h3 contact-message>Lasati-mi un mesaj</h3>
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" name="txtName" class="form-control" placeholder="Nume Prenume *" value="" />
+          <input type="text" name="txtName" class="form-control" placeholder="Nume Prenume *" [(ngModel)]="message.name"/>
         </div>
         <div class="form-group">
-          <input type="text" name="txtEmail" class="form-control" placeholder="Email *" value="" />
+          <input type="text" name="txtEmail" class="form-control" placeholder="Email *" [(ngModel)]="message.email"/>
         </div>
         <div class="form-group">
-          <input type="text" name="txtPhone" class="form-control" placeholder="Telefon *" value="" />
+          <input type="text" name="txtPhone" class="form-control" placeholder="Telefon *" [(ngModel)]="message.phone"/>
         </div>
         <div class="form-group">
-          <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+          <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" (click)="submit()" />
+          <br />
+          <br />
+          <button *ngIf="this.ok" type="button" class="btn btn-success" >Success</button>
         </div>
       </div>
       <div class="col-md-6">

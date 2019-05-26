@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-admin-message',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminMessageComponent implements OnInit {
 
-  constructor() { }
+  messages;
+
+  constructor(messageService: MessageService) {
+    messageService.listMessages().subscribe(res => {
+      this.messages = res;
+    });
+  }
 
   ngOnInit() {
   }

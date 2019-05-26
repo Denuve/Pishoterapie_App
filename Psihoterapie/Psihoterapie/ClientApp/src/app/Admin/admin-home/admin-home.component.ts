@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProgramareService } from '../../User/programare/programare.service';
+import { Programare } from '../../User/programare/programare';
 
 @Component({
   selector: 'app-admin-home',
@@ -7,8 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
-  constructor() { }
+  allAppointments;
+  currentAppointments : Programare[];
+  today: number = Date.now();
+  constructor(private programareService: ProgramareService) {
 
+    this.programareService.listPatients().subscribe(res => {
+      this.allAppointments = res;
+    });
+
+    this.sortByDate();
+  }
+
+  sortByDate() {
+    this.currentAppointments = this.allAppointments;
+  }
+
+ 
   ngOnInit() {
   }
 

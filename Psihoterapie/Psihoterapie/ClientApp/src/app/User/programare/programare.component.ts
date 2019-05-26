@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ProgramareComponent implements OnInit {
 
   patient = new Programare();
+  ok: boolean = false;
   constructor(
     private router: Router,
     private programareService: ProgramareService) {
@@ -20,7 +21,10 @@ export class ProgramareComponent implements OnInit {
 
   
   submit() {
-    this.programareService.postPatient(this.patient);
+    this.programareService.postPatient(this.patient).subscribe(res => {
+      this.router.navigate(['/programare']);
+    });
+    this.ok = true;
   }
 
 
