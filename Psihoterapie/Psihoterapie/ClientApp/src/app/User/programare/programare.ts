@@ -14,5 +14,5 @@ export class Programare {
   medicaldisease: string;
   medication: string;
   otherinformation: string;
-  appointment: any;
+  appointment: Date;
 }

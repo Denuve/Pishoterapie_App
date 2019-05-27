@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgramareService } from '../../User/programare/programare.service';
 import { Programare } from '../../User/programare/programare';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-admin-home',
@@ -17,16 +18,13 @@ export class AdminHomeComponent implements OnInit {
     this.programareService.listPatients().subscribe(res => {
       this.allAppointments = res;
     });
-
-    this.sortByDate();
+    
   }
 
-  sortByDate() {
-    this.currentAppointments = this.allAppointments;
-  }
 
  
   ngOnInit() {
+    
   }
 
 }

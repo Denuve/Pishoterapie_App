@@ -10,12 +10,12 @@
   <!-- Projects -->
   <div class="row" *ngFor="let article of articles">
     <div class="col-md-7">
-        <img class="img-fluid rounded mb-3 mb-md-0" src="../../img/1.jpg" alt="">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://quantisticamente.it/wp-content/uploads/2018/09/I-PENSIERI-RIFLETTONO-CIO-CHE-LA-COSCIENZA-OSSERVA.jpg" alt="">
     </div>
     <div class="col-md-5">
       <h3>{{article.title}}</h3>
         <p >{{article.description}}</p>
-      <a class="btn btn-primary" href="#">View Article</a>
+      <a class="btn btn-primary" routerLink="/articol/{{article.id}}">View Article</a>
     </div>
   </div>
   <!-- /.row -->
