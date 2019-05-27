@@ -25,6 +25,7 @@ import { AdminHomeComponent } from './Admin/admin-home/admin-home.component';
 import { AdminMessageComponent } from './Admin/admin-message/admin-message.component';
 import { AdminAppointmentComponent } from './Admin/admin-appointment/admin-appointment.component';
 import { AdminArchiveComponent } from './Admin/admin-archive/admin-archive.component';
+import { PatientViewComponent } from './Admin/patient-view/patient-view.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AdminArchiveComponent } from './Admin/admin-archive/admin-archive.compo
     AdminHomeComponent,
     AdminMessageComponent,
     AdminAppointmentComponent,
-    AdminArchiveComponent
+    AdminArchiveComponent,
+    PatientViewComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -66,6 +68,7 @@ import { AdminArchiveComponent } from './Admin/admin-archive/admin-archive.compo
       { path: 'admin-message', component: AdminMessageComponent, pathMatch: 'full' },
       { path: 'admin-appointment', component: AdminAppointmentComponent, pathMatch: 'full' },
       { path: 'admin-archive', component: AdminArchiveComponent, pathMatch: 'full' },
+      { path: 'patient-view/:id', component: PatientViewComponent, pathMatch: 'full' },
     ])
   ],
   exports: [

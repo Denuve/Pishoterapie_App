@@ -1,0 +1,27 @@
+<nav style="margin-bottom:20px">
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
+    <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
+    <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
+  </mat-menu>
+</nav>
+
+
+<h3 class="title-h3">{{patient.firstName}} {{patient.lastName}} details</h3>
+
+<div class="card">
+  <div class="card-body">
+    <p class="card-text">Email:{{patient.email}}</p>
+    <p class="card-text">Phone:{{patient.phone}}</p>
+    <p class="card-text">Address:{{patient.address}}</p>
+    <p class="card-text">Age:{{patient.age}}</p>
+    <p class="card-text">Email:{{patient.email}}</p>
+    <p class="card-text">Theraphy Reason:{{patient.theraphyReason}}</p>
+    <p class="card-text">Major Trauma:{{patient.majorTrauma}}</p>
+    <p class="card-text">Family Relationship:{{patient.familyRelationship}}</p>
+    <p class="card-text">Medical Disease:{{patient.medicalDisease}}</p>
+    <p class="card-text">Medication:{{patient.medication}}</p>
+    <p class="card-text">Other Informations:{{patient.otherInformation}}</p>
+  </div>
+</div>

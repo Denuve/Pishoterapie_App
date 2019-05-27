@@ -65,7 +65,7 @@
 
         <div class="form-group">
           <label for="reason">Motivul terapiei</label>
-          <textarea class="form-control" rows="6" [(ngModel)]="patient.theraphyreason" name="reason" #reason="ngModel" required></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.theraphyreason" name="theraphyreason" #reason="ngModel" required></textarea>
         </div>
 
         <div class="alert alert-danger" *ngIf="reason.touched && !reason.valid">
@@ -94,7 +94,7 @@
 
         <div class="form-group">
           <label for="details">Alte precizari</label>
-          <textarea class="form-control" rows="6" [(ngModel)]="patient.otherinformation" name="otherinfo"></textarea>
+          <textarea class="form-control" rows="6" [(ngModel)]="patient.otherinformation" name="otherinformation"></textarea>
         </div>
 
         <h4 class="h4-text">3 .DATA PROGRAMARE SEDINTA</h4>
