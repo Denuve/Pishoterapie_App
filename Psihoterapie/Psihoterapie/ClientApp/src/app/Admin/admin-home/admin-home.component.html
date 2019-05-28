@@ -8,7 +8,7 @@
 </nav>
 
 <div>
-  <h3 class="title-h3">Programari curente {{today | date}}</h3>
+  <h3 class="title-h3">Programari curente</h3>
 </div>
 
 <table class="table">
@@ -18,6 +18,7 @@
       <th scope="col" class="table-sizing">FirstName</th>
       <th scope="col" class="table-sizing">LastName</th>
       <th scope="col" class="table-sizing">Phone</th>
+      <th scope="col" class="table-sizing">Date</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,7 @@
       <td class="table-sizing">{{appointment.firstName}}</td>
       <td class="table-sizing">{{appointment.lastName}}</td>
       <td class="table-sizing">{{appointment.phone}}</td>
+      <td class="table-sizing">{{appointment.appointment | date}}</td>
     </tr>
   </tbody>
 </table>
