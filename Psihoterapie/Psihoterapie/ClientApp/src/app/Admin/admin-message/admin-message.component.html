@@ -1,36 +1,43 @@
-<nav style="margin-bottom:20px">
-  <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
-  <mat-menu #beforeMenu="matMenu" xPosition="before">
-    <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
-    <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
-    <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
-  </mat-menu>
-</nav>
+<div *ngIf="token">
+  <nav style="margin-bottom:20px">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
+      <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
+      <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
+    </mat-menu>
+  </nav>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="inbox">
+  <div class="tab-content">
+    <div class="tab-pane active" id="inbox">
 
-    <div class="container">
-      <div class="content-container clearfix">
-        <div class="col-md-12">
-          <h1 class="content-title">Inbox</h1>
+      <div class="container">
+        <div class="content-container clearfix">
+          <div class="col-md-12">
+            <h1 class="content-title">Inbox</h1>
 
-          <input type="search" placeholder="Search Message" class="form-control mail-search" />
+            <input type="search" placeholder="Search Message" class="form-control mail-search" />
 
-          <ul class="mail-list">
-            <li *ngFor="let message of messages">
-              <a href="">
-                <span class="mail-sender">{{message.name}}</span>
-                <span class="mail-subject">{{message.email}}</span>
-                <p>{{message.messagecontent}}</p>
-                
-              </a>
-            </li>
-              
-          </ul>
+            <ul class="mail-list">
+              <li *ngFor="let message of messages">
+                <a href="">
+                  <span class="mail-sender">{{message.name}}</span>
+                  <span class="mail-subject">{{message.email}}</span>
+                  <p>{{message.messagecontent}}</p>
+
+                </a>
+              </li>
+
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
+  </div>
+  <div *ngIf="!token">
+    <div class="alert alert-danger" role="alert">
+      You are not allowed to access this page.
+    </div>
   </div>

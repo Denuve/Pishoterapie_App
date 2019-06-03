@@ -1,37 +1,44 @@
-<nav style="margin-bottom:20px">
-  <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
-  <mat-menu #beforeMenu="matMenu" xPosition="before">
-    <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
-    <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
-    <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
-  </mat-menu>
-</nav>
+<div *ngIf="token">
+  <nav style="margin-bottom:20px">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
+      <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
+      <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
+    </mat-menu>
+  </nav>
 
 
-<div>
-  <h3 class="title-h3">Arhiva Pacienti</h3>
+  <div>
+    <h3 class="title-h3">Arhiva Pacienti</h3>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="table-sizing">#</th>
+        <th scope="col" class="table-sizing">Nume</th>
+        <th scope="col" class="table-sizing">Prenume</th>
+        <th scope="col" class="table-sizing">Email</th>
+        <th scope="col" class="table-sizing">Telefon</th>
+        <th scope="col" class="table-sizing">Personal Record Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of allPatients">
+        <th scope="row" class="table-sizing">#</th>
+        <td class="table-sizing">{{patient.firstName}}</td>
+        <td class="table-sizing">{{patient.lastName}}</td>
+        <td class="table-sizing">{{patient.email}}</td>
+        <td class="table-sizing">{{patient.phone}}</td>
+        <td class="table-sizing"><a routerLink="/patient-view/{{patient.id}}">Link</a></td>
+      </tr>
+
+    </tbody>
+  </table>
 </div>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col" class="table-sizing">#</th>
-      <th scope="col" class="table-sizing">Nume</th>
-      <th scope="col" class="table-sizing">Prenume</th>
-      <th scope="col" class="table-sizing">Email</th>
-      <th scope="col" class="table-sizing">Telefon</th>
-      <th scope="col" class="table-sizing">Personal Record Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let patient of allPatients">
-      <th scope="row" class="table-sizing">#</th>
-      <td class="table-sizing">{{patient.firstName}}</td>
-      <td class="table-sizing">{{patient.lastName}}</td>
-      <td class="table-sizing">{{patient.email}}</td>
-      <td class="table-sizing">{{patient.phone}}</td>
-      <td class="table-sizing"><a routerLink="/patient-view/{{patient.id}}">Link</a></td>
-    </tr>
-    
-  </tbody>
-</table>
+<div *ngIf="!token">
+  <div class="alert alert-danger" role="alert">
+    You are not allowed to access this page.
+  </div>
+</div>

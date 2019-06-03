@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { LoginModel, Token } from '../shared/security.models';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public loginModel: LoginModel = <LoginModel>{};
+
+  constructor(private httpClient: HttpClient,
+    private router: Router,
+    @Inject('BASE_URL') private baseUrl: string) { }
 
   ngOnInit() {
   }
 
+  loginUser() {
+    this.httpClient.post<Token>(this.baseUrl + `api/Account/Login`, this.loginModel).subscribe(token => {
+
+      localStorage.setItem("token", JSON.stringify(token));
+
+      this.router.navigate(['/admin-home']);
+    });
+  }
 }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Psihoterapie.Models;
 
 namespace Psihoterapie.Models
 {
-    public class PsihoterapieContext : DbContext
+    public class PsihoterapieContext : IdentityDbContext
     {
         public PsihoterapieContext (DbContextOptions<PsihoterapieContext> options)
             : base(options)

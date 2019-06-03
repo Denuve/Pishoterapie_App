@@ -1,33 +1,40 @@
-<nav style="margin-bottom:20px">
-<button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
-<mat-menu #beforeMenu="matMenu" xPosition="before">
-  <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
-  <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
-  <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
-</mat-menu>
-</nav>
+<div *ngIf="token">
+  <nav style="margin-bottom:20px">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Admin Menu</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item><a routerLink="/admin-home">Home</a></button>
+      <button mat-menu-item><a routerLink="/admin-message">Mesaje</a></button>
+      <button mat-menu-item><a routerLink="/admin-archive">Lista Pacienti</a></button>
+    </mat-menu>
+  </nav>
 
-<div>
-  <h3 class="title-h3">Programari curente</h3>
+  <div>
+    <h3 class="title-h3">Programari curente</h3>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="table-sizing">#</th>
+        <th scope="col" class="table-sizing">FirstName</th>
+        <th scope="col" class="table-sizing">LastName</th>
+        <th scope="col" class="table-sizing">Phone</th>
+        <th scope="col" class="table-sizing">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of allAppointments">
+        <th scope="row" class="table-sizing">#</th>
+        <td class="table-sizing">{{appointment.firstName}}</td>
+        <td class="table-sizing">{{appointment.lastName}}</td>
+        <td class="table-sizing">{{appointment.phone}}</td>
+        <td class="table-sizing">{{appointment.appointment | date}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col" class="table-sizing">#</th>
-      <th scope="col" class="table-sizing">FirstName</th>
-      <th scope="col" class="table-sizing">LastName</th>
-      <th scope="col" class="table-sizing">Phone</th>
-      <th scope="col" class="table-sizing">Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let appointment of allAppointments">
-      <th scope="row" class="table-sizing">#</th>
-      <td class="table-sizing">{{appointment.firstName}}</td>
-      <td class="table-sizing">{{appointment.lastName}}</td>
-      <td class="table-sizing">{{appointment.phone}}</td>
-      <td class="table-sizing">{{appointment.appointment | date}}</td>
-    </tr>
-  </tbody>
-</table>
+<div *ngIf="!token">
+  <div class="alert alert-danger" role="alert">
+    You are not allowed to access this page.
+  </div>
+</div>

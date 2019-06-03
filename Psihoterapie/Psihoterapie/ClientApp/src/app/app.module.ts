@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,8 @@ import { AdminMessageComponent } from './Admin/admin-message/admin-message.compo
 import { AdminAppointmentComponent } from './Admin/admin-appointment/admin-appointment.component';
 import { AdminArchiveComponent } from './Admin/admin-archive/admin-archive.component';
 import { PatientViewComponent } from './Admin/patient-view/patient-view.component';
+import { RegisterComponent } from './register/register.component';
+import { HttpRequestInterceptor } from './login.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { PatientViewComponent } from './Admin/patient-view/patient-view.componen
     AdminMessageComponent,
     AdminAppointmentComponent,
     AdminArchiveComponent,
-    PatientViewComponent
+    PatientViewComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -64,6 +67,7 @@ import { PatientViewComponent } from './Admin/patient-view/patient-view.componen
       { path: 'programare', component: ProgramareComponent, pathMatch: 'full' },
       { path: 'contact', component: ContactComponent, pathMatch: 'full' },
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
+      { path: 'register', component: RegisterComponent, pathMatch: 'full' },
       { path: 'admin-home', component: AdminHomeComponent, pathMatch: 'full' },
       { path: 'admin-message', component: AdminMessageComponent, pathMatch: 'full' },
       { path: 'admin-appointment', component: AdminAppointmentComponent, pathMatch: 'full' },
@@ -74,7 +78,14 @@ import { PatientViewComponent } from './Admin/patient-view/patient-view.componen
   exports: [
     AngularMaterialModule
   ],
-  providers: [],
+  providers: [
+    HttpRequestInterceptor,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
